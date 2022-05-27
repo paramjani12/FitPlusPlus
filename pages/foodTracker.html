@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/healthy.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/foodTracker.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <title>Fit++</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">
+        <img src="../images/healthy.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        FitPlusPlus
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bmi.html">BMI Calculator</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="foodTracker.html">Calories Tracker</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="fitness.html">Workout Guide</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <table class="table table-bordered tablefood">
+    <thead class="headingcolor">
+      <tr>
+        <th>
+          <button type="button" id="foodbutton" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add Item</button>
+        </th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thrusday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="rowsize">
+        <td style="background-color: #dbd8d8;">Breakfast</td>
+        <td id="bsun"></td>
+        <td id="bmon"></td>
+        <td id="btue"></td>
+        <td id="bwed"></td>
+        <td id="bthr"></td>
+        <td id="bfri"></td>
+        <td id="bsat"></td>
+      </tr>
+      <tr class="rowsize">
+        <td style="background-color: #dbd8d8;">Lunch</td>
+        <td id="lsun"></td>
+        <td id="lmon"></td>
+        <td id="ltue"></td>
+        <td id="lwed"></td>
+        <td id="lthr"></td>
+        <td id="lfri"></td>
+        <td id="lsat"></td>
+      </tr>
+      <tr class="rowsize">
+        <td style="background-color: #dbd8d8;">Snacks</td>
+        <td id="ssun"></td>
+        <td id="smon"></td>
+        <td id="stue"></td>
+        <td id="swed"></td>
+        <td id="sthr"></td>
+        <td id="sfri"></td>
+        <td id="ssat"></td>
+      </tr>
+      <tr class="rowsize">
+        <td style="background-color: #dbd8d8;">Dinner</td>
+        <td id="dsun"></td>
+        <td id="dmon"></td>
+        <td id="dtue"></td>
+        <td id="dwed"></td>
+        <td id="dthr"></td>
+        <td id="dfri"></td>
+        <td id="dsat"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #e3f2fd;">
+          <h5 class="modal-title" id="exampleModalLabel">Give Food Details🥘</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col">
+              <select class="form-select" id="day" aria-label="day" required>
+                <option selected>Select Day</option>
+                <option value="Sunday">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thrusday">Thrusday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+              </select>
+            </div>
+            <div class="col">
+              <select class="form-select" id="meal" aria-label="meal" required>
+                <option selected>Select Meal</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Dinner">Dinner</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control mt-2" id="description" placeholder="Meal Description">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control mt-2" id="calories" placeholder="Approx Calories">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="addbutton" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../script/foodTracker.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

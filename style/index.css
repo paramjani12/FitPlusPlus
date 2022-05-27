@@ -1,0 +1,15 @@
+.navbar-nav {
+    margin-left: auto;
+}
+#imp{
+    width:100%;
+    height:80vh;
+}
+.icons{
+    width:150px;
+    height:150px;
+}
+.card{
+    margin-left: 10%;
+    border: none;
+}
