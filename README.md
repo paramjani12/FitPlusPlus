@@ -1,3 +1,7 @@
 # FitPlusPlus
-Web application for health related services like BMI Calculator which also gives weight loss or gain information, Calories Tracker for  keeping track of all your eatings in entire week along with their calories and brief insight of acute, accurate or over eating through different color display cards, Workout Guide which included various types of workouts according to user requirement.
+Web application which focuses on providing 3 vital health related assistance for fitness fanatics.
+Users can check precise BMI ratio along with user specific weight loss/gain insights. 
+Keep track of weekly user food intake. Users can visualize past 7 days performance and can improve their intake habits. This feature is first in the class and can attract many eyes.
+Workout guides link users to the most famous and trendy workout techniques. We have included full body workouts, zumba, walk @ home (a special walking program for 60+ aged people) which appeals to a wider set of users.  
+
 Website - https://fitplusplus.herokuapp.com/
